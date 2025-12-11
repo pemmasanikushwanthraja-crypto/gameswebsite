@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Home — Professional</title>
+  <style>
+    :root{
+      --bg:#f6f8fb; --card:#ffffff; --accent:#0ea5a4; --muted:#6b7280; --text:#0f1724;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;}
+    .container{max-width:1000px;margin:40px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand svg{width:44px;height:44px}
+    .brand h1{margin:0;font-size:20px}
+    nav{display:flex;gap:8px;align-items:center}
+    a.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;color:var(--text);border:1px solid rgba(15,23,36,0.06);background:var(--card)}
+    a.btn.primary{background:linear-gradient(90deg,var(--accent),#089ca0);color:white;border:0}
+    main{margin-top:28px;display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:start}
+    .hero{background:var(--card);padding:22px;border-radius:14px;box-shadow:0 6px 18px rgba(2,6,23,0.06)}
+    .hero h2{margin:0 0 8px;font-size:26px}
+    .hero p{margin:0;color:var(--muted);line-height:1.5}
+    .card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 12px rgba(2,6,23,0.04)}
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-top:16px}
+    .feature{display:flex;gap:12px;align-items:center}
+    .feature svg{width:34px;height:34px;flex-shrink:0}
+    footer{margin-top:20px;text-align:center;color:var(--muted);font-size:13px}
+    @media (max-width:880px){main{grid-template-columns:1fr} .brand h1{font-size:18px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand" aria-label="Simple Home brand">
+        <!-- logo -->
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5" stroke="#0f1724" stroke-width="1.2"/>
+          <path d="M6 12h12" stroke="#0f1724" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <h1>Simple Home — Professional</h1>
+      </div>
+
+      <nav role="navigation" aria-label="Main">
+        <a class="btn" href="index.html" aria-current="page">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 11.5L12 4l9 7.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          Home
+        </a>
+        <a class="btn primary" href="about.html">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="3" stroke="currentColor" stroke-width="1.6"/><path d="M6 20c2-4 10-4 12 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          About
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="heroTitle">
+        <h2 id="heroTitle">Welcome — Clean, fast and professional</h2>
+        <p>Use this lightweight starter template as your homepage. It includes accessible navigation, tidy layout, and SVG icons you can customize. Click <strong>About</strong> to learn more about the project and the team.</p>
+
+        <div class="features" aria-hidden="false">
+          <div class="feature">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2v20" stroke="#089ca0" stroke-width="1.6" stroke-linecap="round"/><path d="M5 7h14" stroke="#089ca0" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <div>
+              <div style="font-weight:700">Performance</div>
+              <div style="color:var(--muted);font-size:13px">No libraries, minimal CSS</div>
+            </div>
+          </div>
+
+          <div class="feature">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 8v8" stroke="#089ca0" stroke-width="1.6" stroke-linecap="round"/><path d="M8 12h8" stroke="#089ca0" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <div>
+              <div style="font-weight:700">Accessible</div>
+              <div style="color:var(--muted);font-size:13px">Keyboard & screen reader friendly</div>
+            </div>
+          </div>
+
+          <div class="feature">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M3 12h18" stroke="#089ca0" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <div>
+              <div style="font-weight:700">Customizable</div>
+              <div style="color:var(--muted);font-size:13px">Swap colors & icons easily</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="card" aria-labelledby="quickTitle">
+        <h3 id="quickTitle" style="margin-top:0">Quick actions</h3>
+        <p style="color:var(--muted);margin:8px 0 12px">Jump to important pages or contact us.</p>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <a class="btn" href="about.html" style="justify-content:center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 8v8" stroke="currentColor" stroke-width="1.6"/><path d="M8 12h8" stroke="currentColor" stroke-width="1.6"/></svg>
+            About the team
+          </a>
+          <a class="btn" href="#contact" style="justify-content:center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 10v10H3V10"/><path d="M3 6l9 6 9-6"/></svg>
+            Contact
+          </a>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <p style="margin:18px 0 0;color:var(--muted)">© Simple Home • A clean starter template</p>
+    </footer>
+  </div>
+</body>
+</html>
