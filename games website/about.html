@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Simple Home</title>
+  <style>
+    :root{--bg:#ffffff;--card:#ffffff;--accent:#0ea5a4;--muted:#6b7280;--text:#0f1724}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;background:linear-gradient(180deg,#f8fafc,#ffffff);color:var(--text)}
+    .wrap{max-width:980px;margin:36px auto;padding:20px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    nav{display:flex;gap:8px}
+    a.btn{padding:8px 12px;border-radius:9px;text-decoration:none;color:var(--text);border:1px solid rgba(15,23,36,0.06);background:var(--card);font-weight:600}
+    a.btn.ghost{background:transparent}
+    .hero{display:flex;gap:20px;align-items:center;margin-top:20px}
+    .hero .text{flex:1}
+    .hero h2{margin:0;font-size:26px}
+    .hero p{color:var(--muted);line-height:1.5}
+    .panel{margin-top:20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+    .team-card{background:linear-gradient(180deg,#ffffff,#fbfdfe);padding:16px;border-radius:12px;border:1px solid rgba(2,6,23,0.04);box-shadow:0 6px 18px rgba(2,6,23,0.03)}
+    .team-card img{width:56px;height:56px;border-radius:12px;object-fit:cover}
+    .contact{margin-top:20px;background:var(--card);padding:14px;border-radius:10px}
+    footer{margin-top:24px;color:var(--muted);font-size:13px;text-align:center}
+    @media (max-width:760px){.hero{flex-direction:column;align-items:stretch}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" stroke="#0f1724" stroke-width="1.2"/></svg>
+        <div>
+          <div style="font-weight:700">Simple Home</div>
+          <div style="font-size:13px;color:var(--muted)">Professional template</div>
+        </div>
+      </div>
+
+      <nav aria-label="breadcrumb">
+        <a class="btn" href="index.html" title="Back to home">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 11.5L12 4l9 7.5" stroke="currentColor" stroke-width="1.6"/></svg>
+          Home
+        </a>
+        <a class="btn ghost" href="#" onclick="window.history.back();return false">Back</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="aboutTitle">
+        <div class="text">
+          <h2 id="aboutTitle">About Simple Home</h2>
+          <p>Simple Home is a small, opinionated starter template focused on speed, accessibility and ease-of-use. It uses pure HTML/CSS and lightweight SVG icons so you can drop it into any project and customise quickly.</p>
+
+          <div style="margin-top:12px">
+            <strong>Mission</strong>
+            <p style="margin:6px 0;color:var(--muted)">Provide a clear, maintainable starting point for personal sites, portfolios, and small product pages — without heavy frameworks or build steps.</p>
+          </div>
+        </div>
+
+        <div style="width:240px">
+          <div style="background:linear-gradient(180deg,#f8fdfa,#ffffff);padding:14px;border-radius:12px;border:1px solid rgba(2,6,23,0.04)">
+            <div style="font-weight:700">Quick facts</div>
+            <ul style="margin:8px 0 0;padding-left:18px;color:var(--muted)">
+              <li>No frameworks</li>
+              <li>Accessible nav</li>
+              <li>Easy to customise</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" aria-label="Team">
+        <div class="team-card" role="article" aria-labelledby="t1">
+          <div style="display:flex;gap:12px;align-items:center">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='56' height='56'><rect width='56' height='56' fill='%230ea5a4'/></svg>" alt="">
+            <div>
+              <div id="t1" style="font-weight:700">Kushwant</div>
+              <div style="color:var(--muted);font-size:13px">Founder & Developer</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-card" role="article" aria-labelledby="t2">
+          <div style="display:flex;gap:12px;align-items:center">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='56' height='56'><rect width='56' height='56' fill='%230f1724'/></svg>" alt="">
+            <div>
+              <div id="t2" style="font-weight:700">Design</div>
+              <div style="color:var(--muted);font-size:13px">UI & Brand</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-card" role="article" aria-labelledby="t3">
+          <div style="display:flex;gap:12px;align-items:center">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='56' height='56'><rect width='56' height='56' fill='%23f59e0b'/></svg>" alt="">
+            <div>
+              <div id="t3" style="font-weight:700">Support</div>
+              <div style="color:var(--muted);font-size:13px">Docs & Help</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contactTitle">
+        <h3 id="contactTitle" style="margin:0 0 8px">Contact</h3>
+        <p style="margin:0;color:var(--muted)">For questions or customization, email <a href="mailto:hello@example.com">hello@example.com</a> or open an issue in your repo.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© Simple Home • Lightweight starter • Built with SVG icons</p>
+    </footer>
+  </div>
+</body>
+</html>
